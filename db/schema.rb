@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_08_192022) do
+ActiveRecord::Schema[8.1].define(version: 2026_02_08_235646) do
   create_table "movies", force: :cascade do |t|
     t.string "MPAA_rating"
     t.datetime "created_at", null: false
@@ -20,8 +20,11 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_08_192022) do
     t.integer "year"
   end
 
-  create_table "top_casts", force: :cascade do |t|
+  create_table "topcasts", force: :cascade do |t|
+    t.string "actor_name"
+    t.string "character_name"
     t.datetime "created_at", null: false
+    t.string "movie_name"
     t.datetime "updated_at", null: false
   end
 end

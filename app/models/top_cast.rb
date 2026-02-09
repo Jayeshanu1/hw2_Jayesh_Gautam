@@ -1,2 +1,0 @@
-class TopCast < ApplicationRecord
-end
