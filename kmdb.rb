@@ -231,7 +231,14 @@ Cast15.save
 
 puts "There are #{Topcast.all.count} casts"
 
+film = Movie.where[0]
+puts film
 
 
-
-
+index = 0
+loodp do 
+  if index == Movie.all.count
+    break
+  end
+  
+end
