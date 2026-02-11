@@ -87,27 +87,27 @@
 # TODO!
 
 # Prints a header for the movies output
-puts "Movies"
-puts "======"
-puts ""
+# puts "Movies"
+# puts "======"
+# puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
 
 # Prints a header for the cast output
-puts ""
-puts "Top Cast"
-puts "========"
-puts ""
+# puts ""
+# puts "Top Cast"
+# puts "========"
+# puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
 
 # Prints a header for the agent's list of represented actors output
-puts ""
-puts "Represented by agent"
-puts "===================="
-puts ""
+# puts ""
+# puts "Represented by agent"
+# puts "===================="
+# puts ""
 
 # Query the actor data and loop through the results to display the agent's list of represented actors output.
 # TODO!
@@ -231,14 +231,31 @@ Cast15.save
 
 puts "There are #{Topcast.all.count} casts"
 
-film = Movie.where[0]
-puts film
 
+puts "Movies"
+puts "======"
+puts ""
 
-index = 0
-loodp do 
-  if index == Movie.all.count
-    break
-  end
-  
+all_movies = Movie.all
+for movie in all_movies
+  puts "#{movie["movie_name"]}                   #{movie["year"]}           #{movie["MPAA_rating"]}  #{movie["studio"]}"
 end
+
+
+puts ""
+puts "Top Cast"
+puts "========"
+puts ""
+
+
+all_cast = Topcast.all
+for cast in all_cast
+  puts "#{cast["movie_name"]}                  #{cast["actor_name"]}                #{cast["character_name"]}"
+end
+
+
+
+puts ""
+puts "Represented by agent"
+puts "===================="
+puts "Christian Bale"
